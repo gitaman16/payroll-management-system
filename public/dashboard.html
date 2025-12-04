@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Payroll Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <h3>Payroll System</h3>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="employees.html">Employees</a></li>
+        <li><a href="salary.html">Salary Management</a></li>
+        <li><a href="attendance.html">Attendance</a></li>
+        <li><a href="payroll.html">Payroll</a></li>
+        <li><a href="reports.html">Reports</a></li>
+        <li><a href="#" id="logoutBtn">Logout</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+      <header class="header">
+        <h1>Dashboard</h1>
+        <div class="user-info">
+          <span id="userName">Loading...</span>
+          <span id="userRole"></span>
+        </div>
+      </header>
+      
+      <div class="content">
+        <!-- Statistics Cards -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>Total Employees</h3>
+            <p class="stat-value" id="totalEmployees">-</p>
+          </div>
+          <div class="stat-card">
+            <h3>Monthly Payroll</h3>
+            <p class="stat-value" id="monthlyPayroll">-</p>
+          </div>
+          <div class="stat-card">
+            <h3>Pending Leaves</h3>
+            <p class="stat-value" id="pendingLeaves">-</p>
+          </div>
+          <div class="stat-card">
+            <h3>Present Today</h3>
+            <p class="stat-value" id="presentToday">-</p>
+          </div>
+        </div>
+        
+        <!-- Charts -->
+        <div class="charts-grid">
+          <div class="chart-container">
+            <h3>Monthly Payroll Trends</h3>
+            <canvas id="payrollChart"></canvas>
+          </div>
+          <div class="chart-container">
+            <h3>Department-wise Distribution</h3>
+            <canvas id="departmentChart"></canvas>
+          </div>
+        </div>
+        
+        <!-- Recent Activity -->
+        <div class="recent-activity">
+          <h3>Recent Activity</h3>
+          <table id="activityTable">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Action</th>
+                <th>User</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="4" class="text-center">Loading...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

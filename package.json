@@ -1,0 +1,33 @@
+{
+  "name": "payroll-management-system",
+  "version": "1.0.0",
+  "description": "Enterprise-grade payroll management system",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "payroll",
+    "hr",
+    "salary",
+    "management"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.1",
+    "express-validator": "^7.3.1",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.15.3",
+    "nodemailer": "^6.10.1",
+    "pdfkit": "^0.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}

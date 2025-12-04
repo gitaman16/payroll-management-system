@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employees - Payroll Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <h3>Payroll System</h3>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="employees.html" class="active">Employees</a></li>
+        <li><a href="salary.html">Salary Management</a></li>
+        <li><a href="attendance.html">Attendance</a></li>
+        <li><a href="payroll.html">Payroll</a></li>
+        <li><a href="reports.html">Reports</a></li>
+        <li><a href="#" id="logoutBtn">Logout</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+      <header class="header">
+        <h1>Employee Management</h1>
+        <button class="btn btn-primary" id="addEmployeeBtn">Add New Employee</button>
+      </header>
+      
+      <div class="content">
+        <!-- Search and Filter -->
+        <div class="filter-bar">
+          <input type="text" id="searchInput" placeholder="Search employees...">
+          <select id="departmentFilter">
+            <option value="">All Departments</option>
+            <option value="IT">IT</option>
+            <option value="HR">HR</option>
+            <option value="Finance">Finance</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Sales">Sales</option>
+          </select>
+          <select id="statusFilter">
+            <option value="">All Status</option>
+            <option value="active">Active</option>
+            <option value="inactive">Inactive</option>
+          </select>
+        </div>
+        
+        <!-- Employee Table -->
+        <div class="table-container">
+          <table id="employeeTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Designation</th>
+                <th>Department</th>
+                <th>Join Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="8" class="text-center">Loading...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add/Edit Employee Modal -->
+  <div id="employeeModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalTitle">Add New Employee</h2>
+      <form id="employeeForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="designation">Designation *</label>
+            <input type="text" id="designation" name="designation" required>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="department">Department *</label>
+            <select id="department" name="department" required>
+              <option value="">Select Department</option>
+              <option value="IT">IT</option>
+              <option value="HR">HR</option>
+              <option value="Finance">Finance</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Sales">Sales</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="join_date">Join Date *</label>
+            <input type="date" id="join_date" name="join_date" required>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bank_account">Bank Account</label>
+            <input type="text" id="bank_account" name="bank_account">
+          </div>
+          <div class="form-group">
+            <label for="ifsc_code">IFSC Code</label>
+            <input type="text" id="ifsc_code" name="ifsc_code">
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pan_number">PAN Number</label>
+            <input type="text" id="pan_number" name="pan_number">
+          </div>
+        </div>
+        
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Save Employee</button>
+          <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <script src="js/employees.js"></script>
+</body>
+</html>
