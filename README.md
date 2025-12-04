@@ -137,7 +137,6 @@ http://localhost:3000
 
 ![Employee List](screenshots/employee_list.png)
 
-![Payroll Processing](screenshots/payroll_processing.png)
 
 
 ---
