@@ -135,7 +135,7 @@ http://localhost:3000
 
 ![Dashboard](screenshots/dashboard.png)
 
-![Employee List](screenshots/employee_list.png)
+![Employee List](screenshots/employee_lists.png)
 
 
 
